@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ Write a program that has the user enter three real numbers x, y, z and 
+ sorts them in ascending order (at the end of the program execution: x ≤ y ≤ z).
+ */
+
+
 void print_help(const char *exe_name)
 {
     printf("Sort three integers passed in parameters.\n\nUsage: %s value1 value2, value3\n\n", exe_name);

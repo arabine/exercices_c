@@ -11,6 +11,7 @@ void print_help(const char *exe_name)
 
 int main(int argc, char **argv)
 {
+    int errcode = -1;
     if (argc != 2)
     {
         print_help(argv[0]);
@@ -21,10 +22,16 @@ int main(int argc, char **argv)
 
     char output[MAX_OUTPUT_STRING];
     
-    encode(argv[1], output);
-    
-    printf("Output: %s\n", output); 
-    
+    if (encode(argv[1], output))
+    {
+        printf("Output: %s\n", output);
+        errcode = 0;
+    }
+    else
+    {
+        fprintf(stderr, "Output buffer too short, cannot encode the string.");
+    }
+    return errcode;
 }
 
 

@@ -22,6 +22,10 @@ static const morse_char_t alphabet[] = {
 
 static const morse_char_t chiffres[] = {
     {
+        "--- --- --- --- ---",
+        '0'
+    },
+    {
         "- --- --- --- ---",
         '1'
     }
