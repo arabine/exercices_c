@@ -29,7 +29,18 @@ int main()
     printf("%.2f, %.2f, %.2f\n", x, y, z);
     
     permute(&x, &y, &z);
-
+    
     printf("%.2f, %.2f, %.2f\n", x, y, z);
+    
+    int i = 2, j = 4;
+    
+    printf("Before: i=%d, j=%d\n", i, j);
+    
+    i = i + j;
+    j = i - j;
+    i = i - j;
+
+    printf("After: i=%d, j=%d\n", i, j);
+    
     return 0;
 }
